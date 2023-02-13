@@ -1,0 +1,27 @@
+@import '../../styles/usable/usable.scss';
+
+.header {
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include transition;
+    backdrop-filter: blur(0px);
+    &.blur {
+        backdrop-filter: blur(15px);
+    }
+}
+
+.settings {
+    width: 40px;
+    height: 40px;
+    background-color: #D0D0D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include br50;
+}

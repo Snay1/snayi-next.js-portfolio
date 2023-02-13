@@ -1,0 +1,34 @@
+@import '../../../styles/usable/usable.scss';
+
+.about {
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
+    width: 542px;
+    height: 717px;
+    img {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 542px;
+        height: 717px;
+        object-fit: scale-down;
+    }
+}
+
+.text {
+    width: 680px;
+    line-height: 130%;
+}

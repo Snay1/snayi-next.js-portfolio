@@ -1,0 +1,45 @@
+@import './usable/usable.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: $bgColor;
+    color: $white;
+    font-family: 'Russo One', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, 
+ol, 
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}

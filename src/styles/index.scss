@@ -1,0 +1,32 @@
+@import './usable/usable.scss';
+@import './nullstyle.scss';
+
+#__next {
+    height: 100%;
+}
+
+._container {
+    width: 1312px;
+    margin: 0 auto;
+    @include desk1320px {
+        width: 1024px;
+        padding: 0 16px;
+    }
+    @include desk1024px {
+        width: 100%;
+    }
+}
+
+._section {
+    padding: 64px 0;
+}
+
+h2._title {
+    font-size: 56px !important;
+    margin: 0 0 64px 0;
+    @include textShadow;
+    opacity: 1 !important;
+    @include mobile {
+        font-size: 32px !important;
+    }
+}

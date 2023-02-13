@@ -1,0 +1,148 @@
+@import '../../../styles/usable/usable.scss';
+
+.introduce {
+    position: relative;
+    height: 100vh;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    @include mobile {
+        min-height: 500px;
+    }
+}
+
+.title, .subtitle {
+    z-index: 5;
+}
+
+.title {
+    font-size: 64px;
+    @include textShadow;
+    @include mobile {
+        font-size: 36px;
+    }
+}
+
+.avatar {
+    position: relative;
+    margin: 45px 0;
+    z-index: 15;
+    img {
+        @include br50;
+    }
+    @media (max-width: 630px) {
+        width: 200px;
+        height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.status {
+    position: absolute;
+    bottom: 8px;
+    right: 66px;
+    width: 30px;
+    height: 30px;
+    background-color: $green;
+    @include br50;
+    @media (max-width: 630px) {
+        width: 20px;
+        height: 20px;
+        right: 33px;
+    }
+    &.afk {
+        background-color: $yellow;
+    }
+    &.offline {
+        background-color: $red;
+    }
+    &.osu {
+        background-color: $pink;
+    }
+    &:hover {
+        ~ .statusText {
+            opacity: 1;
+            &::before {
+                top: 15px;
+            }
+        }
+    }
+}
+
+.statusText {
+    position: absolute;
+    bottom: 0;
+    left: 315px;
+    white-space: nowrap;
+    padding: 12px;
+    background-color: $darkBg;
+    border: 1px solid $white;
+    @include br8px;
+    @include transition;
+    z-index: 15;
+    opacity: 0;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: -8px;
+        width: 15px;
+        height: 15px;
+        background-color: $darkBg;
+        border-top: 1px solid $white;
+        border-left: 1px solid $white;
+        transform: rotate(-45deg);
+        @include transition;
+    }
+    @media (max-width: 630px) {
+        left: 185px;
+        bottom: -3px;
+    }
+
+    &.osu {
+        @media (max-width: 425px) {
+            transform: rotate(90deg);   
+            left: 96px;
+            bottom: -100px;
+        }
+    }
+}
+
+.subtitle {
+    font-size: 20px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 10;
+    img {
+        width: 100%;
+        height: 100%;
+        object-position: left;
+        object-fit: cover;
+    }
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(3px);
+    }
+}
