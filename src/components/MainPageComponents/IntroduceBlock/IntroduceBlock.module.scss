@@ -15,7 +15,9 @@
 }
 
 .title, .subtitle {
+    position: relative;
     z-index: 5;
+    @include transition;
 }
 
 .title {
@@ -30,6 +32,7 @@
     position: relative;
     margin: 45px 0;
     z-index: 15;
+    @include transition;
     img {
         @include br50;
     }

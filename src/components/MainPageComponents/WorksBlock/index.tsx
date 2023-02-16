@@ -27,7 +27,7 @@ const WorksBlock = () => {
                 }
             ]
         },
-        { title: 'title2', images: [image, image], description: 'some text' },
+        { title: 'title2', images: [ image], description: 'some text' },
         { title: 'title3', images: [image, image], description: 'some text' },
         { title: 'title4', images: [image, image], description: 'some text' },
         { title: 'title5', images: [image, image], description: 'some text' },

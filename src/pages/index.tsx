@@ -17,7 +17,6 @@ export default function Home() {
             <AboutMe />
             <SkillsBlock />
             <WorksBlock />
-            <ContactBlock />
         </PageTemplate>
     </>
   )

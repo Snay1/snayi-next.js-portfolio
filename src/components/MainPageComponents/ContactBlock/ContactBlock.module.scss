@@ -1,8 +1,13 @@
 @import '../../../styles/usable/usable.scss';
 
+.contact {
+    overflow: hidden;
+}
+
 .wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 16px;
 }  
 
@@ -13,6 +18,26 @@
     width: 505px;
     @include desk1024px {
         width: 100%;
+    }
+}
+
+.img {
+    position: relative;
+    width: 500px;
+    height: 900px;
+    @include desk1024px {
+        display: none;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 900px;
+        object-fit: scale-down;
+        @include desk1320px {
+            right: -100px;
+        }
     }
 }
 
@@ -43,6 +68,9 @@
     .row {
         display: flex;
         gap: 10px;
+        @include mobile {
+            flex-direction: column;
+        }
     }
     input, button {
         font-family: inherit;
