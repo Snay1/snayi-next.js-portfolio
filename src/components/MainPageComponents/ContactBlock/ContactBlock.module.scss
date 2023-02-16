@@ -1,0 +1,93 @@
+@import '../../../styles/usable/usable.scss';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}  
+
+.contactItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 505px;
+    @include desk1024px {
+        width: 100%;
+    }
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    .statusImg {
+        overflow: hidden;
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        @include br50;
+        margin: 0 15px 0 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .row {
+        display: flex;
+        gap: 10px;
+    }
+    input, button {
+        font-family: inherit;
+        font-size: inherit;
+        min-height: 64px;
+        width: 100%;
+
+    }
+    input {
+        background-color: $darkGray;
+        @include br8px;
+        color: rgba(255, 255, 255, 0.67);
+        padding: 20px;
+        outline: 0;
+    }
+    button {
+        color: inherit;
+    }
+}
+
+.alternativeText {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 15px 0;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #2D2D2D;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+.alternativeItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}

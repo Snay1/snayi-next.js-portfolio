@@ -1,23 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import s from './SkillsBlock.module.scss';
 
-import jsIcon from '../../../images/jsIcon.png';
-import sassIcon from '../../../images/sassIcon.png';
-import reactIcon from '../../../images/reactIcon.png';
-import reduxIcon from '../../../images/reduxIcon.png';
-import nextIcon from '../../../images/nextIcon.png';
-import mongoIcon from '../../../images/mongoIcon.png';
-import tsIcon from '../../../images/tsIcon.png';
-import nodeIcon from '../../../images/nodeIcon.png';
-import dockerIcon from '../../../images/dockerIcon.png';
-import expressIcon from '../../../images/expressIcon.png';
+import jsIcon from '@/images/jsIcon.svg';
+import sassIcon from '@/images/sassIcon.svg';
+import reactIcon from '@/images/reactIcon.svg';
+import reduxIcon from '@/images/reduxIcon.svg';
+import nextIcon from '@/images/nextIcon.svg';
+import mongoIcon from '@/images/mongoIcon.svg';
+import tsIcon from '@/images/tsIcon.svg';
+import nodeIcon from '@/images/nodeIcon.svg';
+import dockerIcon from '@/images/dockerIcon.svg';
+import expressIcon from '@/images/expressIcon.svg';
 
-import SkillItemsComponent from './SkillItemsComponent';
+import SkillsItemsComponent from './SkillsItemsComponent';
 
 const SkillsBlock = () => {
 
     const tabs = [
-        { title: 'skills', value: 0 },
+        { title: 'main skills', value: 0 },
         { title: 'all skills', value: 1 }
     ];
 
@@ -45,10 +45,13 @@ const SkillsBlock = () => {
         else {
             setItems([...skillsInitial])
         }
-
-        setSelected(value);
-
     }
+
+    useEffect(() => {
+
+        filterHandler(selected);
+
+    }, [selected])
 
     return (
         <section className={`${s.skills} _section`}>
@@ -56,14 +59,14 @@ const SkillsBlock = () => {
                 <div className={s.top}>
                     {
                         tabs && 
-                        tabs.map(tab => <h2 key={tab.title} className={`${s.title} ${tab.value === selected ? '_title' : ''}`} onClick={() => filterHandler(tab.value)}>
+                        tabs.map(tab => <h2 key={tab.title} className={`${s.title} ${tab.value === selected ? '_title' : ''}`} onClick={() => setSelected(tab.value)}>
                                             {tab.title}
                                         </h2>)
                     }
                 </div>
-                <SkillItemsComponent skills={items.filter(skill => skill.knowledge === 4)} />
-                <SkillItemsComponent skills={items.filter(skill => skill.knowledge === 2)} />
-                <SkillItemsComponent skills={items.filter(skill => skill.knowledge === 1)} />
+                <SkillsItemsComponent skills={items.filter(skill => skill.knowledge === 4)} />
+                <SkillsItemsComponent skills={items.filter(skill => skill.knowledge === 2)} />
+                <SkillsItemsComponent skills={items.filter(skill => skill.knowledge === 1)} />
             </div>
         </section>
     )

@@ -1,0 +1,175 @@
+@import '../../../styles/usable/usable.scss';
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 38px;
+    grid-gap: 38px;
+    &:not(:last-child) {
+        margin-bottom: 38px;
+    }
+    @include desk1320px {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    .img {
+        width: 100%;
+        min-height: 230px;
+        margin: 0 0 24px 0;
+        @include br8px;
+        overflow: hidden;
+        background-color: $darkGray;
+        @include desk1320px {
+            min-height: 180px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.openedItemWrapper {
+    overflow: hidden;
+    padding: 20px 0 0 0;
+}
+
+.openedItem {
+    background-color: $darkGray;
+    padding: 36px 0;
+    margin: 63px 0 50px 0;
+    .content {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        @include desk1024px {
+            flex-direction: column;
+        }
+        .arrow {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: -59px;
+            left: 0;
+            background-color: $darkGray;
+            transform: rotate(45deg);
+            @include transition;
+            z-index: -1;
+        }
+    }
+    .slider {
+        position: relative;
+
+        .counter {
+            position: absolute;
+            top: -100px;
+            right: 22px;
+            white-space: nowrap;
+            z-index: 5;
+            @include transition;
+            &.active {
+                top: 22px;
+            }
+        }
+
+        .left, .right {
+            position: absolute;
+            bottom: 50%;
+            margin: 0 0 -25px 0;
+            @include br50;
+            border: 2px solid #444;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            @include transition;
+            z-index: 5;
+            &:disabled {
+                opacity: .6;
+            }
+        }
+        .left {
+            left: 22px;
+        }
+        .right {
+            right: 22px;
+            transform: rotate(180deg);
+        }
+
+        .imagesWrapper {
+            display: flex;
+            height: 100%;
+            @include transition;
+        }
+    }
+    .slider, .img {
+        min-width: 410px;
+        max-width: 410px;
+        height: 328px;
+        margin: 0 50px 0 0;
+        overflow: hidden;
+        background-color: $darkBg;
+        @include br8px;
+        @include desk1024px {
+            width: 100%;
+            margin: 0 0 25px 0;
+            min-width: unset;
+            max-width: unset;
+        }
+        @include mobile {
+            height: 250px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .top {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        h3 {
+            font-size: 32px;
+        }
+        .stack {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            li {
+                max-width: 25px;
+                max-height: 25px;
+                min-height: 25px;
+                min-width: 25px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: scale-down;
+                }
+            }
+        }
+    }
+    .info {
+        .text {
+            line-height: 130%;
+            margin: 32px 0;
+        }
+        .button {
+            width: 207px;
+        }
+    }
+}

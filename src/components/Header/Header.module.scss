@@ -10,18 +10,52 @@
     justify-content: space-between;
     @include transition;
     backdrop-filter: blur(0px);
-    &.blur {
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    &.active {
+        pointer-events: all;
         backdrop-filter: blur(15px);
+        ~ .burgerButton {
+            span {
+                &:first-child {
+                    transform: rotate(45deg);
+                    top: 6px;
+                }
+                &:nth-child(2) {
+                    width: 0;
+                }
+                &:last-child {
+                    top: -6px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
     }
 }
 
-.settings {
+.burgerButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
     width: 40px;
     height: 40px;
     background-color: #D0D0D0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 3px;
     cursor: pointer;
+    z-index: 500;
     @include br50;
+    span {
+        position: relative;
+        top: 0;
+        width: 20px;
+        height: 3px;
+        background-color: $darkBg;
+        @include br8px;
+        @include transition
+    }
 }

@@ -5,6 +5,10 @@
     height: 100%;
 }
 
+._lock {
+    overflow: hidden;
+}
+
 ._container {
     width: 1312px;
     margin: 0 auto;
@@ -19,14 +23,36 @@
 
 ._section {
     padding: 64px 0;
+    min-height: 900px;
+    // height: 100vh;
+    @include mobile {
+        min-height: 500px;
+    }
 }
 
 h2._title {
     font-size: 56px !important;
-    margin: 0 0 64px 0;
+    margin-bottom: 64px;
     @include textShadow;
     opacity: 1 !important;
     @include mobile {
         font-size: 32px !important;
+        margin-bottom: 36px;
     }
 }
+
+.button {
+    background-color: $darkBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    @include br8px;
+    padding: 16px 20px;
+    @include transition;
+    cursor: pointer;
+    &:hover {
+        opacity: .6;
+    }
+}
+

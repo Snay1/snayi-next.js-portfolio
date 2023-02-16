@@ -3,4 +3,20 @@
 .footer {
     background-color: $darkBg;
     min-height: 150px;
+    padding: 64px 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.socials {
+    li {
+        @include transition;
+        &:hover {
+            opacity: .6;
+        }
+    }
 }

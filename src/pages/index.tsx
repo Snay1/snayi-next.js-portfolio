@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { PageTemplate } from '../components';
-import { IntroduceBlock, AboutMe, SkillsBlock } from '@/components/MainPageComponents/';
+import { IntroduceBlock, AboutMe, SkillsBlock, WorksBlock, ContactBlock } from '@/components/MainPageComponents/';
 
 export default function Home() {
   return (
@@ -14,8 +14,10 @@ export default function Home() {
         </Head>
         <PageTemplate>
             <IntroduceBlock />
-            {/* <AboutMe /> */}
+            <AboutMe />
             <SkillsBlock />
+            <WorksBlock />
+            <ContactBlock />
         </PageTemplate>
     </>
   )

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import s from './IntroduceBlock.module.scss';
 
-import bg from '../../../images/backgroud-image.png';
-import avatar from '../../../images/avatar.jpg';
-import bottom from '../../../images/intro-bottom.png';
+import bg from '@/images/backgroud-image.png';
+import avatar from '@/images/avatar.jpg';
+import bottom from '@/images/intro-bottom.png';
 
 const IntroduceBlock = () => {
     return (

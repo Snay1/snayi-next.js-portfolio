@@ -1,18 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
 import s from './SkillsBlock.module.scss';
 
-interface ISkillItem {
-    title: string,
-    icon: StaticImageData,
-    knowledge: number,
-    isMain?: Boolean | undefined
-}
+import { ISkillItem, ISkillItems } from '@/types/SkillsTypes';
 
-interface ISkillItems {
-    skills: Array<ISkillItem>;
-}
-
-const SkillItemsComponent = ({ skills }: ISkillItems) => {
+const SkillsItemsComponent = ({ skills }: ISkillItems) => {
     return (
         <ul className={s.items}>
         {
@@ -25,7 +16,8 @@ const SkillItemsComponent = ({ skills }: ISkillItems) => {
                                         </li>)
         }
     </ul>
+    
     )
 }
 
-export default SkillItemsComponent
+export default SkillsItemsComponent

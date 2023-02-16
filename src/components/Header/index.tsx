@@ -5,34 +5,31 @@ import { IconSelector } from '../';
 
 const Header = () => {
 
-    const [isBlur, setIsBlur] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
 
-        const onScroll = () => {
-
-            if (pageYOffset > 500) {
-                setIsBlur(true);
-            } else if (pageYOffset <= 500) {
-                setIsBlur(false);
-            }
+        if (isActive) {
+            document.body.classList.add('_lock');
+        } else {
+            document.body.classList.remove('_lock');
         }
 
-        document.addEventListener('scroll', onScroll);
-
-        return () => document.removeEventListener('scroll', onScroll);
-
-    }, [])
+    }, [isActive])
 
     return (
-        <header className={`${s.header} ${isBlur ? s.blur : ''}`}>
-            <div className={s.someContent}>
-
-            </div>
-            <div className={s.settings}>
-                <IconSelector icon='settingsIcon' />
-            </div>  
+        <>
+        <header className={`${s.header} ${isActive ? s.active : ''}`}>
+            <div className={s.content}>
+                
+            </div> 
         </header>
+        <div className={s.burgerButton} onClick={() => setIsActive(!isActive)}>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> 
+        </>
     )
 }
 
