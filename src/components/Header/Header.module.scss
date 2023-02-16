@@ -11,9 +11,11 @@
     @include transition;
     backdrop-filter: blur(0px);
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     pointer-events: none;
+    opacity: 0;
     &.active {
+        opacity: 1;
         pointer-events: all;
         backdrop-filter: blur(15px);
         ~ .burgerButton {
@@ -31,6 +33,45 @@
                 }
             }
         }
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.navigation {
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+
+.navigationItems {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    li {
+        position: relative;
+        width: fit-content;
+        overflow: hidden;
+        padding: 10px;
+        @include br8px;
+        @include transition;
+        cursor: pointer;
+        min-height: 42px;
+        white-space: nowrap;
+        &:hover {
+            opacity: .6;
+        }
+        a {
+            display: flex;
+        }
+
     }
 }
 
@@ -57,5 +98,16 @@
         background-color: $darkBg;
         @include br8px;
         @include transition
+    }
+}
+
+.time {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    svg {
+        margin: 0 10px 0 0;
     }
 }

@@ -8,6 +8,8 @@ const IconSelector = ({icon}:IIconSelector) => {
     
     switch(icon) {
 
+        case 'clockIcon': return <svg width="25" height="25" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20C40 14.6957 37.8929 9.60859 34.1421 5.85786C30.3914 2.10714 25.3043 0 20 0ZM20 36C11.1634 36 4 28.8366 4 20C4 11.1634 11.1634 4 20 4C28.8366 4 36 11.1634 36 20C36 24.2435 34.3143 28.3131 31.3137 31.3137C28.3131 34.3143 24.2435 36 20 36ZM21.76 19.28V9C21.76 8.44772 21.3123 8 20.76 8H19.24C18.6877 8 18.24 8.44772 18.24 9V20.32C18.2498 20.5824 18.3567 20.8319 18.54 21.02L26.54 29.02C26.9356 29.4036 27.5644 29.4036 27.96 29.02L29.02 27.96C29.4036 27.5644 29.4036 26.9356 29.02 26.54L21.76 19.28Z" fill="white"/></svg>
+
         case 'twitchIcon': return <svg width="32" height="36" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 19V11M27 19V11M37 1H1V33H11V41L19 33H29L37 25V1Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
 
         case 'arrowIcon': return <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.72 11.7L0.319999 6.3L5.72 0.9H7.34L2.516 5.724L12.92 5.724V6.876L2.516 6.876L7.34 11.7H5.72Z" fill="#191919"/></svg>
