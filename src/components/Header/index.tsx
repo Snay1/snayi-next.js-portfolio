@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import s from './Header.module.scss';
 
-import { IconSelector } from '../';
-
 const Header = () => {
 
     const [isActive, setIsActive] = useState(false);
@@ -21,7 +19,7 @@ const Header = () => {
         <>
         <header className={`${s.header} ${isActive ? s.active : ''}`}>
             <div className={s.content}>
-                
+
             </div> 
         </header>
         <div className={s.burgerButton} onClick={() => setIsActive(!isActive)}>
