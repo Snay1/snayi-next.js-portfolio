@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import s from './SkillsBlock.module.scss';
 
-import { ISkillItem, ISkillItems } from '@/types/SkillsTypes';
+import { ISkillItems } from '@/types/SkillsTypes';
 
 const SkillsItemsComponent = ({ skills }: ISkillItems) => {
     return (

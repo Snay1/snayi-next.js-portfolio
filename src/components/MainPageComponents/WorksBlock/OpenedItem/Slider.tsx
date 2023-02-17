@@ -38,8 +38,6 @@ const Slider = ({images, title}: ISlider) => {
 
         if (!sliderRef || !sliderRef.current) return;
 
-        console.log(sliderRef.current.getBoundingClientRect().width)
-
         const sliderWidth = sliderRef.current.getBoundingClientRect().width;
 
         setSliderScroll(sliderWidth * (currentImage - 1));

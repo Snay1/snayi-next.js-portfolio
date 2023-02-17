@@ -65,7 +65,7 @@ const OpenedItem = ({info, itemNumber}: IOpenedItem) => {
                         <p className={s.text}>
                             {info.description}
                         </p>
-                        <a className={`${s.button} button`}>go to site</a>
+                        <a className={`${s.button} button`} href={info.link} target='_blank' rel="noreferrer">go to site</a>
                     </div>
                 </div>
             </div>

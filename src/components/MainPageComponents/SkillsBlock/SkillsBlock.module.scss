@@ -1,9 +1,12 @@
 @import '../../../styles/usable/usable.scss';
 
-.top {
-    margin: 0 0 64px 0;
+.top, .items, .item {
     display: flex;
     align-items: center;
+}
+
+.top {
+    margin: 0 0 64px 0;
     flex-wrap: wrap;
     gap: 50px;
     @include mobile {
@@ -23,8 +26,6 @@
 }
 
 .items {
-    display: flex;
-    align-items: center;
     flex-wrap: wrap;
     gap: 40px;
     &:not(:last-child) {
@@ -44,8 +45,6 @@
 }
 
 .item {
-    display: flex;
-    align-items: center;
     flex-direction: column;
     .icon {
         position: relative;

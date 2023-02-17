@@ -1,8 +1,8 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import s from './WorksBlock.module.scss';
 
-import { IWorkItem, IWorkItemProps } from '@/types/WorksTypes';
+import { IWorkItemProps } from '@/types/WorksTypes';
 
 const WorkItem = ({title, images, onClick}: IWorkItemProps) => {
 

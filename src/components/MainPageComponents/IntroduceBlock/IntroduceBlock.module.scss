@@ -1,7 +1,14 @@
 @import '../../../styles/usable/usable.scss';
 
-.introduce {
+.introduce, .title, .subtitle, .avatar {
     position: relative;
+}
+
+.status, .statusText, .bottom, .bg {
+    position: absolute;
+}
+
+.introduce {
     height: 100vh;
     min-height: 900px;
     display: flex;
@@ -15,7 +22,6 @@
 }
 
 .title, .subtitle {
-    position: relative;
     z-index: 5;
     @include transition;
 }
@@ -29,7 +35,6 @@
 }
 
 .avatar {
-    position: relative;
     margin: 45px 0;
     z-index: 15;
     @include transition;
@@ -47,7 +52,6 @@
 }
 
 .status {
-    position: absolute;
     bottom: 8px;
     right: 66px;
     width: 30px;
@@ -79,7 +83,6 @@
 }
 
 .statusText {
-    position: absolute;
     bottom: 0;
     left: 315px;
     white-space: nowrap;
@@ -122,7 +125,6 @@
 }
 
 .bottom {
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -137,7 +139,6 @@
 }
 
 .bg {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;

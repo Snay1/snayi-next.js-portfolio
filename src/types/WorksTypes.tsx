@@ -9,11 +9,12 @@ export interface IWorkItem {
     title: string,
     images: Array<StaticImageData>,
     description?: string,
-    stack?: Array<IStackItem>
+    stack?: Array<IStackItem>,
+    link?: string
 }
 
 export interface IOpenedInfo extends IWorkItem {
-    gridItemWidth: number
+    gridItemWidth: number,
 }
 
 export interface IWorkItemProps extends IWorkItem {

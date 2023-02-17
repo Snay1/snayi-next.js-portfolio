@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import s from './AboutMeBlock.module.scss';
 
-import image from '../../../images/about-img.png';
+import image from '@/images/about-img.png';
 
 const AboutMeBlock = () => {
     return (

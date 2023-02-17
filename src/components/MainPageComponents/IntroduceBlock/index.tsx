@@ -26,9 +26,9 @@ const IntroduceBlock = () => {
             <h1 className={s.title} style={{ top: `${position / 6}px` }}>Snayi</h1>
             <div className={s.avatar} style={{ top: `${position / 5}px` }}>
                 <Image src={avatar} alt={'Avatar Image'} />
-                <div className={s.status}>
+                {/* <div className={s.status}>
                 </div>
-                <div className={s.statusText}>playing osu!</div>
+                <div className={s.statusText}>playing osu!</div> */}
             </div>
             <p className={s.subtitle} style={{ top: `${position / 3}px` }}>
                 Front-end Developer

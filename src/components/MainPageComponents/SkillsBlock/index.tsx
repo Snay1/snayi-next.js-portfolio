@@ -26,7 +26,7 @@ const SkillsBlock = () => {
         { title: 'sass(scss)', icon: sassIcon, knowledge: 4, isMain: true },
         { title: 'react.js', icon: reactIcon, knowledge: 4, isMain: true },
         { title: 'redux (rtk)', icon: reduxIcon, knowledge: 4, isMain: true },
-        { title: 'next.js', icon: nextIcon, knowledge: 2, isMain: true },
+        { title: 'next.js', icon: nextIcon, knowledge: 4, isMain: true },
         { title: 'mongoDB', icon: mongoIcon, knowledge: 2 },
         { title: 'typescript', icon: tsIcon, knowledge: 2 },
         { title: 'node.js', icon: nodeIcon, knowledge: 1 },

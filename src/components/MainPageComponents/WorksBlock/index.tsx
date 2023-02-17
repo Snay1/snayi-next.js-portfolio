@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
-import s from './WorksBlock.module.scss';
 
 import image from '@/images/workItemBg.jpg'
 
 import nextIcon from '@/images/nextIcon.svg';
-
 
 import WorkItems from './WorkItems';
 import { IWorkItem } from '@/types/WorksTypes';
@@ -25,17 +23,18 @@ const WorksBlock = () => {
                     title: 'next',
                     image: nextIcon
                 }
-            ]
+            ],
+            link: 'https://github.com/Snay1'
         },
-        { title: 'title2', images: [ image], description: 'some text' },
-        { title: 'title3', images: [image, image], description: 'some text' },
-        { title: 'title4', images: [image, image], description: 'some text' },
-        { title: 'title5', images: [image, image], description: 'some text' },
-        { title: 'title6', images: [image, image], description: 'some text' },
-        { title: 'title7', images: [image, image], description: 'some text' },
-        { title: 'title8', images: [image, image], description: 'some text' },
-        { title: 'title9', images: [image, image], description: 'some text' },
-        { title: 'title10', images: [image, image], description: 'some text' },
+        { title: 'title2', images: [ image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title3', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title4', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title5', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title6', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title7', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title8', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title9', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
+        { title: 'title10', images: [image, image], description: 'some text', link: 'https://github.com/Snay1' },
     ]
 
     const [items, setItems] = useState<IWorkItem[][]>([]);

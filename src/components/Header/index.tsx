@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import s from './Header.module.scss';
 import TimeComponent from './TimeComponent';
