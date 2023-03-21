@@ -1,0 +1,27 @@
+@import '../../../styles/usable/usable.scss';
+
+.aside {
+    width: 250px;
+    background-color: $darkBg;
+    padding: 20px;
+    h1 {
+        margin: 0 0 30px 0;
+        font-size: 32px;
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    li {
+        font-size: 20px;
+        @include transition;
+        cursor: pointer;
+        &:hover {
+            opacity: .6;
+        }
+        &:not(:last-child) {
+            margin: 0 0 15px 0;
+        }
+    }
+}

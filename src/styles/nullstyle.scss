@@ -16,7 +16,7 @@ html, body {
     height: 100%;
     background-color: $bgColor;
     color: $white;
-    font-family: 'Russo One', sans-serif;
+    @include mainFont;
     font-size: 18px;
 }
 
