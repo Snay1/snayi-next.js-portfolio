@@ -4,7 +4,7 @@ import Head from "next/head";
 import { AdminWrapper } from "@/components";
 import { AdminAside, AdminPageSwitcher } from '@/components/AdminPageComponents';
 
-const index = () => {
+const AdminPage = () => {
 
     const router = useRouter();
 
@@ -23,4 +23,4 @@ const index = () => {
   )
 }
 
-export default index
+export default AdminPage
