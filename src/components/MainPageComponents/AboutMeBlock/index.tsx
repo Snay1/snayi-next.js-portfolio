@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import s from './AboutMeBlock.module.scss';
+import Image from "next/image";
+import s from "./AboutMeBlock.module.scss";
 
-import image from '@/images/about-img.png';
+import image from "@/images/about-img.png";
 
 const AboutMeBlock = () => {
     return (
@@ -10,15 +10,21 @@ const AboutMeBlock = () => {
                 <h2 className={`_title`}>about me</h2>
                 <div className={s.info}>
                     <div className={s.img}>
-                        <Image src={image} alt='About Image' />
+                        <Image src={image} alt="About Image" />
                     </div>
                     <p className={s.text}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis cum quae repellat quos distinctio eum fuga laudantium, non earum! Temporibus ipsum voluptas eveniet molestiae iure. Eligendi distinctio perspiciatis facere natus.
+                        Hi! I'm FrontEnd developer from Saint Petersburg. I have
+                        been engaged in FrontEnd development since october 2021.
+                        My skills are that i have practical experience in the
+                        development of big projects. My current stack:
+                        Next.js/React.js + TypeScript + Redux Toolkit + React
+                        Query. Also I have a big experience in site layout
+                        making.
                     </p>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default AboutMeBlock
+export default AboutMeBlock;

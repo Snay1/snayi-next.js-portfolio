@@ -1,6 +1,7 @@
-@import '../../styles/usable/usable.scss';
+@import "../../styles/usable/usable.scss";
 
-.header, .content {
+.header,
+.content {
     display: flex;
     align-items: center;
 }
@@ -67,12 +68,11 @@
         min-height: 42px;
         white-space: nowrap;
         &:hover {
-            opacity: .6;
+            opacity: 0.6;
         }
         a {
             display: flex;
         }
-
     }
 }
 
@@ -82,7 +82,7 @@
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: #D0D0D0;
+    background-color: #d0d0d0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@
         height: 3px;
         background-color: $darkBg;
         @include br8px;
-        @include transition
+        @include transition;
     }
 }
 

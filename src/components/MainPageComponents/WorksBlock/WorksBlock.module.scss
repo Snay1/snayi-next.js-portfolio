@@ -1,4 +1,4 @@
-@import '../../../styles/usable/usable.scss';
+@import "../../../styles/usable/usable.scss";
 
 .items {
     display: grid;
@@ -56,7 +56,7 @@
             flex-direction: column;
         }
         .arrow {
-            content: '';
+            content: "";
             position: absolute;
             width: 50px;
             height: 50px;
@@ -83,7 +83,8 @@
             }
         }
 
-        .left, .right {
+        .left,
+        .right {
             position: absolute;
             bottom: 50%;
             margin: 0 0 -25px 0;
@@ -99,7 +100,7 @@
             @include transition;
             z-index: 5;
             &:disabled {
-                opacity: .6;
+                opacity: 0.6;
             }
         }
         .left {
@@ -116,7 +117,8 @@
             @include transition;
         }
     }
-    .slider, .img {
+    .slider,
+    .img {
         min-width: 410px;
         max-width: 410px;
         height: 328px;

@@ -1,5 +1,5 @@
-@import './usable/usable.scss';
-@import './nullstyle.scss';
+@import "./usable/usable.scss";
+@import "./nullstyle.scss";
 
 #__next {
     height: 100%;
@@ -51,7 +51,6 @@ h2._title {
     @include transition;
     cursor: pointer;
     &:hover {
-        opacity: .6;
+        opacity: 0.6;
     }
 }
-

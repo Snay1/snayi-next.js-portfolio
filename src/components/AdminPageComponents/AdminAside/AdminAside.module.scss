@@ -1,4 +1,4 @@
-@import '../../../styles/usable/usable.scss';
+@import "../../../styles/usable/usable.scss";
 
 .aside {
     width: 250px;
@@ -18,7 +18,7 @@
         @include transition;
         cursor: pointer;
         &:hover {
-            opacity: .6;
+            opacity: 0.6;
         }
         &:not(:last-child) {
             margin: 0 0 15px 0;

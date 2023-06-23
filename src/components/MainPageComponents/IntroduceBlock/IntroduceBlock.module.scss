@@ -1,10 +1,16 @@
-@import '../../../styles/usable/usable.scss';
+@import "../../../styles/usable/usable.scss";
 
-.introduce, .title, .subtitle, .avatar {
+.introduce,
+.title,
+.subtitle,
+.avatar {
     position: relative;
 }
 
-.status, .statusText, .bottom, .bg {
+.status,
+.statusText,
+.bottom,
+.bg {
     position: absolute;
 }
 
@@ -21,7 +27,8 @@
     }
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
     z-index: 5;
     @include transition;
 }
@@ -94,7 +101,7 @@
     z-index: 15;
     opacity: 0;
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 5px;
         left: -8px;
@@ -113,7 +120,7 @@
 
     &.osu {
         @media (max-width: 425px) {
-            transform: rotate(90deg);   
+            transform: rotate(90deg);
             left: 96px;
             bottom: -100px;
         }

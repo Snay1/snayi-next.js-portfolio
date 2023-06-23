@@ -1,6 +1,8 @@
-@import '../../../styles/usable/usable.scss';
+@import "../../../styles/usable/usable.scss";
 
-.top, .items, .item {
+.top,
+.items,
+.item {
     display: flex;
     align-items: center;
 }
@@ -17,12 +19,11 @@
         @include transition;
         font-size: 32px;
         cursor: pointer;
-        opacity: .5;
+        opacity: 0.5;
         @include mobile {
             font-size: 24px;
         }
     }
-
 }
 
 .items {

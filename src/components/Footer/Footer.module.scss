@@ -1,4 +1,4 @@
-@import '../../styles/usable/usable.scss';
+@import "../../styles/usable/usable.scss";
 
 .footer {
     background-color: $darkBg;
@@ -24,7 +24,7 @@
     li {
         @include transition;
         &:hover {
-            opacity: .6;
+            opacity: 0.6;
         }
     }
 }

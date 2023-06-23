@@ -1,4 +1,4 @@
-@import '../../styles/usable/usable.scss';
+@import "../../styles/usable/usable.scss";
 
 .button {
     width: 100%;
@@ -11,6 +11,6 @@
     @include mainFont;
     @include transition;
     &:hover {
-        opacity: .6;
+        opacity: 0.6;
     }
 }

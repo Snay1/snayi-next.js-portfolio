@@ -1,17 +1,17 @@
-import { AboutMeComponent } from "../"
-
+import { AboutMeComponent } from "../";
 
 interface IAdminPageSwitcher {
-    page: string | string[] | undefined
+    page: string | string[] | undefined;
 }
 
 const AdminPageSwitcher = ({ page }: IAdminPageSwitcher) => {
-    switch(page) {
+    switch (page) {
+        case "about-me":
+            return <AboutMeComponent />;
 
-        case 'about-me': return <AboutMeComponent />
-
-        default: return <></>
+        default:
+            return <></>;
     }
-}
+};
 
-export default AdminPageSwitcher
+export default AdminPageSwitcher;

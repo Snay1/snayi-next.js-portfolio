@@ -1,0 +1,10 @@
+export { default as jsIcon } from "./jsIcon.svg";
+export { default as dockerIcon } from "./dockerIcon.svg";
+export { default as expressIcon } from "./expressIcon.svg";
+export { default as mongoIcon } from "./mongoIcon.svg";
+export { default as nextIcon } from "./nextIcon.svg";
+export { default as nodeIcon } from "./nodeIcon.svg";
+export { default as reactIcon } from "./reactIcon.svg";
+export { default as reduxIcon } from "./reduxIcon.svg";
+export { default as sassIcon } from "./sassIcon.svg";
+export { default as tsIcon } from "./tsIcon.svg";
