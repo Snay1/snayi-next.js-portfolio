@@ -13,7 +13,11 @@ const AboutMeBlock = () => {
                         <Image src={image} alt="About Image" />
                     </div>
                     <p className={s.text}>
-                        Hi! I'm FrontEnd developer from Saint Petersburg. I have been engaged in FrontEnd development since october 2021. My skills are that i have practical experience in the development of big projects. My current stack: Next.js/React.js + TypeScript + Redux Toolkit + React Query. Also I have a big experience in site layout making.
+                        Hi! I am FrontEnd developer from Saint Petersburg.
+                        I have been engaged in FrontEnd development since october 2021. 
+                        My skills are that i have practical experience in the development of big projects.
+                        My current stack: Next.js/React.js + TypeScript + Redux Toolkit + React Query. 
+                        Also I have a big experience in site layout making.
                     </p>
                 </div>
             </div>
