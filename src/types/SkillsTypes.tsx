@@ -4,7 +4,7 @@ export interface ISkillItem {
     title: string;
     icon: StaticImageData;
     knowledge: number;
-    isMain?: Boolean | undefined;
+    isMain: boolean;
 }
 
 export interface ISkillItems {

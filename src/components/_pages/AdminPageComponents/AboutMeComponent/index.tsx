@@ -8,18 +8,15 @@ import { SyntheticEvent } from "react";
 import { API_IMAGES_LINK, API_LINK } from "@/constants";
 
 interface IAboutData {
-    image: string | null | undefined;
     text: string | null | undefined;
 }
 
 const AboutMeComponent = () => {
     const imageRef = useRef<HTMLInputElement | null>(null);
 
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState<IAboutData>({
-        text: "",
-        image: "",
-    });
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<boolean>(false);
+    const [text, setText] = useState<string>("");
 
     const getAboutMe = async () => {
         await axios
@@ -27,14 +24,23 @@ const AboutMeComponent = () => {
             .then((res) => {
                 const { data } = res;
                 if (data.success) {
-                    setData({
-                        text: data.result.text,
-                        image: data.result.image,
-                    });
+                    
                 }
             })
             .catch((e) => console.warn(e));
+        
+        const res = await axios.get("/aboutMe").catch(e => console.warn(e));
+
         setLoading(false);
+
+        if (!res || !res.data || !res.data.success) {
+            setError(true);
+            return setText("");
+        }
+
+        setText(res.data.result.text);
+        setError(false);
+        
     };
 
     const selectImageHandler = () => {
@@ -54,8 +60,8 @@ const AboutMeComponent = () => {
 
         axios
             .post("/aboutMe", {
-                text: text || data.text,
-                image: image || data.image,
+                text: text
+                // image: image || data.image,
             })
             .then((res) => {
                 console.log(res);
@@ -64,24 +70,24 @@ const AboutMeComponent = () => {
             .catch((e) => console.log(e));
     };
 
-    const updateImageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.currentTarget.files) {
-            const formData = new FormData();
+    // const updateImageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     if (e.currentTarget.files) {
+    //         const formData = new FormData();
 
-            const files = e.currentTarget.files;
+    //         const files = e.currentTarget.files;
 
-            formData.append("images", files[0]);
+    //         formData.append("images", files[0]);
 
-            axios
-                .post("/upload", formData)
-                .then((res) => {
-                    const image = res.data.urls[0];
-                    setData({ ...data, image: image });
-                    updateHandler(null, null, image);
-                })
-                .catch((e) => console.warn(e));
-        }
-    };
+    //         axios
+    //             .post("/upload", formData)
+    //             .then((res) => {
+    //                 const image = res.data.urls[0];
+    //                 setData({ ...data, image: image });
+    //                 updateHandler(null, null, image);
+    //             })
+    //             .catch((e) => console.warn(e));
+    //     }
+    // };
 
     useEffect(() => {
         getAboutMe();
@@ -94,7 +100,7 @@ const AboutMeComponent = () => {
                 onSubmit={(e) => updateHandler(e, null, null)}
             >
                 <div className={s.textWrapper}>
-                    <div className={s.selectImage} onClick={selectImageHandler}>
+                    {/* <div className={s.selectImage} onClick={selectImageHandler}>
                         {data.image ? (
                             <img
                                 src={`${API_IMAGES_LINK}${data.image}`}
@@ -108,13 +114,13 @@ const AboutMeComponent = () => {
                             ref={imageRef}
                             onChange={updateImageHandler}
                         />
-                    </div>
+                    </div> */}
                     <textarea
                         className={s.textArea}
                         placeholder={"Text about me"}
-                        value={data.text || ""}
+                        value={text || ""}
                         onChange={(e) =>
-                            setData({ ...data, text: e.target.value })
+                            setText(e.target.value)
                         }
                     ></textarea>
                 </div>

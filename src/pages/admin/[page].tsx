@@ -5,7 +5,7 @@ import { AdminWrapper } from "@/components";
 import {
     AdminAside,
     AdminPageSwitcher,
-} from "@/components/AdminPageComponents";
+} from "@/components/_pages/AdminPageComponents";
 
 const AdminPage = () => {
     const router = useRouter();

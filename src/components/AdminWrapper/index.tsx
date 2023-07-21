@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "@/axios";
 import s from "./AdminWrapper.module.scss";
 
-import { AdminLoginComponent } from "../AdminPageComponents";
+import { AdminLoginComponent } from "../_pages/AdminPageComponents";
 
 interface AdminWrapperInterface {
     children: React.ReactNode;

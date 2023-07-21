@@ -2,11 +2,11 @@ import Head from "next/head";
 
 import { PageTemplate } from "@/components";
 import {
-    IntroduceBlock,
+    IntroduceBlock, 
     AboutMe,
     SkillsBlock,
     WorksBlock,
-} from "@/components/MainPageComponents/";
+} from "@/components/_pages/MainPageComponents/";
 
 export default function Home() {
     return (
