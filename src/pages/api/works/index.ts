@@ -3,8 +3,13 @@ import { StaticImageData } from "next/image";
 
 import { IStackItem } from "@/types/WorksTypes";
 
-import image from "@/images/workItemBg.jpg";
-import { reactIcon, reduxIcon, sassIcon } from "@/images/skillsImages";
+import getsportLogo from "@/images/workImages/getsport/getsport-logo.jpg";
+
+import { 
+    reactStackItem, 
+    reduxStackItem, 
+    sassStackItem 
+    } from "@/common/stackItems";
 
 type Work = {
     title: string;
@@ -21,20 +26,11 @@ const WorksApi = (req: NextApiRequest, res: NextApiResponse) => {
                 title: "GetSport",
                 description:
                     "GetSport: One platform for sports players, coaches, facility owners, massage therapists, and psychologists",
-                images: [image],
+                images: [getsportLogo],
                 stack: [
-                    {
-                        title: "React.js",
-                        image: reactIcon,
-                    },
-                    {
-                        title: "SCSS",
-                        image: sassIcon,
-                    },
-                    {
-                        title: "Redux",
-                        image: reduxIcon,
-                    },
+                    reactStackItem,
+                    reduxStackItem,
+                    sassStackItem
                 ],
                 link: "https://getsport.fi/",
             },
