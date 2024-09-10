@@ -2,23 +2,18 @@ import { useEffect, useState } from "react";
 import s from "./Header.module.scss";
 import TimeComponent from "./TimeComponent";
 
-const Header = () => {
-    const navItems = [
-        { title: "github", link: "https://github.com/Snay1" },
-        { title: "twitch", link: "https://www.twitch.tv/snayi" },
-        { title: "osu acc", link: "https://osu.ppy.sh/users/10552244" },
-    ];
+const navItems = [
+    { title: "github", link: "https://github.com/Snay1" },
+    { title: "tg", link: "https://t.me/snayiii" },
+];
+
+const Header: React.FC = () => {
 
     const [isActive, setIsActive] = useState(false);
     const [page, setPage] = useState("/");
 
     useEffect(() => {
-        if (isActive) {
-            document.body.classList.add("_lock");
-        } else {
-            document.body.classList.remove("_lock");
-        }
-
+        document.body.classList[isActive ? "add" : "remove"]("_lock");
         setPage(document.location.pathname);
     }, [isActive]);
 

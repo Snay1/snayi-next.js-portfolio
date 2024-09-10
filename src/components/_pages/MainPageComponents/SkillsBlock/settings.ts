@@ -25,7 +25,7 @@ export const skillsInitial: ISkillItem[] = [
     { title: "typescript", icon: tsIcon, knowledge: 4, isMain: true },
     { title: "next.js", icon: nextIcon, knowledge: 4, isMain: true },
     { title: "mongoDB", icon: mongoIcon, knowledge: 2, isMain: false },
-    { title: "node.js", icon: nodeIcon, knowledge: 1, isMain: false },
-    { title: "docker", icon: dockerIcon, knowledge: 1, isMain: false },
-    { title: "express", icon: expressIcon, knowledge: 1, isMain: false },
+    { title: "node.js", icon: nodeIcon, knowledge: 2, isMain: false },
+    { title: "docker", icon: dockerIcon, knowledge: 2, isMain: false },
+    { title: "express", icon: expressIcon, knowledge: 2, isMain: false },
 ];

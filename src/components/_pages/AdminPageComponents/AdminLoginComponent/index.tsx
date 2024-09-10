@@ -8,27 +8,38 @@ import { FormButton } from "@/components";
 const AdminLoginComponent = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    const submitHandler = (e: SyntheticEvent) => {
+    const submitHandler = async (e: SyntheticEvent) => {
         e.preventDefault();
 
-        axios
-            .post("/auth/login", {
+        if (loading) {
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const res = await axios.post("/auth/login", {
                 email,
                 password,
-            })
-            .then((res) => {
-                const data = res.data;
+            });
 
-                if (data.success) {
-                    window.localStorage.setItem(
-                        "snayi-portfolio-token",
-                        data.result.token
-                    );
-                    document.location.reload();
-                }
-            })
-            .catch((e) => console.warn(e));
+            if (!res.data || !res.data.success) {
+                throw Error();
+            }
+
+            window.localStorage.setItem(
+                "snayi-portfolio-token",
+                res.data.result.token
+            );
+            document.location.reload();
+
+        } catch (error) {
+            alert("Неверный логин или пароль");
+        } finally {
+            setLoading(false);
+        }
+
     };
 
     return (
@@ -48,7 +59,7 @@ const AdminLoginComponent = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     autoComplete="off"
                 />
-                <FormButton text="login" />
+                <FormButton disabled={loading} text="login" />
             </form>
         </div>
     );

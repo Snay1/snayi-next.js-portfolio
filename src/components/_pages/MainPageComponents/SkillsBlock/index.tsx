@@ -26,7 +26,8 @@ const SkillsBlock = () => {
         <section className={`${s.skills}`}>
             <div className="_container">
                 <div className={s.top}>
-                    {tabs &&
+                    {
+                    tabs && tabs.length ?
                         tabs.map((tab) => (
                             <h2
                                 key={tab.title}
@@ -37,7 +38,8 @@ const SkillsBlock = () => {
                             >
                                 {tab.title}
                             </h2>
-                        ))}
+                        )) : <></>
+                    }
                 </div>
                 <SkillsItemsComponent
                     skills={items.filter((skill) => skill.knowledge === 4)}

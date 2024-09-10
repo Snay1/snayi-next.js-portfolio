@@ -12,10 +12,12 @@
 ._container {
     width: 1312px;
     margin: 0 auto;
+
     @include desk1320px {
         width: 1024px;
         padding: 0 16px;
     }
+    
     @include desk1024px {
         width: 100%;
     }
@@ -24,16 +26,18 @@
 ._section {
     padding: 64px 0;
     min-height: 900px;
+
     @include mobile {
         min-height: 500px;
     }
 }
 
 h2._title {
+    @include textShadow;
     font-size: 56px !important;
     margin-bottom: 64px;
-    @include textShadow;
     opacity: 1 !important;
+
     @include mobile {
         font-size: 32px !important;
         margin-bottom: 36px;
@@ -41,14 +45,14 @@ h2._title {
 }
 
 .button {
+    @include br8px;
+    @include transition;
     background-color: $darkBlue;
     display: flex;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    @include br8px;
     padding: 16px 20px;
-    @include transition;
     cursor: pointer;
     &:hover {
         opacity: 0.6;

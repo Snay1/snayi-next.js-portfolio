@@ -20,24 +20,22 @@ type Work = {
 };
 
 const WorksApi = (req: NextApiRequest, res: NextApiResponse) => {
-    const resItems = (): Work[] => {
-        return [
-            {
-                title: "GetSport",
-                description:
-                    "GetSport: One platform for sports players, coaches, facility owners, massage therapists, and psychologists",
-                images: [getsportLogo],
-                stack: [
-                    reactStackItem,
-                    reduxStackItem,
-                    sassStackItem
-                ],
-                link: "https://getsport.fi/",
-            },
-        ];
-    };
+    const resItems: Work[] = [
+        {
+            title: "GetSport",
+            description:
+                "GetSport: One platform for sports players, coaches, facility owners, massage therapists, and psychologists",
+            images: [getsportLogo],
+            stack: [
+                reactStackItem,
+                reduxStackItem,
+                sassStackItem
+            ],
+            link: "https://getsport.fi/",
+        },
+    ];
 
-    res.status(200).json(resItems());
+    res.status(200).json(resItems);
 };
 
 export default WorksApi;

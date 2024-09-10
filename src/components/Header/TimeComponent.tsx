@@ -27,13 +27,21 @@ const TimeComponent = () => {
     };
 
     useEffect(() => {
+
         getTimeHandler();
+
+        const interval = setInterval(getTimeHandler, 2000);
+
+        return () => {
+            clearInterval(interval);
+        }
+
     }, []);
 
     return (
         <div className={s.time}>
             <IconSelector icon="clockIcon" />
-            <p>{time}</p>
+            <p>My current time: {time}</p>
         </div>
     );
 };

@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import s from "./AboutMeComponent.module.scss";
 import axios from "@/axios";
 
 import { AdminTemplate, FormButton } from "@/components";
 import { SyntheticEvent } from "react";
-import { API_IMAGES_LINK, API_LINK } from "@/constants";
 
 interface IAboutData {
     text: string | null | undefined;
