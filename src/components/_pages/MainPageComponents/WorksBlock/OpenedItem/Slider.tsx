@@ -1,16 +1,16 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, FC } from "react";
 import s from "../WorksBlock.module.scss";
 
 import Image, { StaticImageData } from "next/image";
 
 import IconSelector from "@/components/IconSelector";
 
-interface ISlider {
+interface SliderProps {
     images: Array<StaticImageData>;
     title: string;
 }
 
-const Slider = ({ images, title }: ISlider) => {
+const Slider: FC<SliderProps> = ({ images, title }) => {
     const sliderRef = useRef<HTMLDivElement | null>(null);
 
     const [currentImage, setCurrentImage] = useState(1);

@@ -11,13 +11,13 @@
 }
 
 .form {
+    @include rounded-main;
     width: 500px;
     padding: 20px;
-    @include br8px;
     border: 1px solid $white;
     display: flex;
     flex-direction: column;
-    @include mobile {
+    @include break-mobile {
         width: 100%;
     }
     h2 {
@@ -30,11 +30,11 @@
         background-color: $white;
     }
     input {
+        @include rounded-main;
+        @include font-main;
+        @include transition;
         padding: 10px;
         font-size: inherit;
-        @include br8px;
-        @include mainFont;
-        @include transition;
         outline: 0;
         margin: 0 0 15px 0;
     }

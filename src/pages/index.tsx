@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { PageTemplate } from "@/components";
 import {
-    IntroduceBlock, 
+    IntroduceBlock,
     AboutMe,
     SkillsBlock,
     WorksBlock,

@@ -1,12 +1,17 @@
-import React from "react";
+import { FC } from "react";
 
-export type IconType = "clockIcon" | "twitchIcon" | "arrowIcon" | "githubIcon" | "settingsIcon";
+export type IconType =
+    | "clockIcon"
+    | "twitchIcon"
+    | "arrowIcon"
+    | "githubIcon"
+    | "settingsIcon";
 
 interface IconSelectorProps {
     icon: IconType;
 }
 
-const IconSelector: React.FC<IconSelectorProps> = ({ icon }) => {
+const IconSelector: FC<IconSelectorProps> = ({ icon }) => {
     switch (icon) {
         case "clockIcon":
             return (

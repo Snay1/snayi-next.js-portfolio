@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    @include mobile {
+    @include break-mobile {
         flex-direction: column;
         padding: 32px 0;
     }

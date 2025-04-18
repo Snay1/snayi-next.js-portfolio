@@ -1,3 +1,4 @@
+import { FC } from "react";
 import s from "./FormButton.module.scss";
 
 interface FormButtonProps {
@@ -5,7 +6,7 @@ interface FormButtonProps {
     disabled?: boolean;
 }
 
-const FormButton: React.FC<FormButtonProps> = ({ text, disabled, }) => {
+const FormButton: FC<FormButtonProps> = ({ text, disabled }) => {
     return (
         <button type="submit" className={s.button} disabled={disabled}>
             {text || "submit"}

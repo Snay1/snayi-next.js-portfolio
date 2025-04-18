@@ -11,7 +11,7 @@
     margin: 0 0 64px 0;
     flex-wrap: wrap;
     gap: 50px;
-    @include mobile {
+    @include break-mobile {
         gap: 20px;
     }
     h2 {
@@ -20,7 +20,7 @@
         font-size: 32px;
         cursor: pointer;
         opacity: 0.5;
-        @include mobile {
+        @include break-mobile {
             font-size: 24px;
         }
     }
@@ -32,7 +32,7 @@
     &:not(:last-child) {
         margin: 0 0 40px 0;
     }
-    @include mobile {
+    @include break-mobile {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 15px;
@@ -55,7 +55,7 @@
             right: -7px;
             width: 20px;
             height: 20px;
-            @include br50;
+            @include rounded-full;
             background-color: $green;
             &.good {
                 background-color: $yellow;

@@ -1,10 +1,11 @@
+import { FC } from "react";
 import s from "./AdminTemplate.module.scss";
 
-interface IAdminTemplate {
+interface AdminTemplateProps {
     children: React.ReactNode;
 }
 
-const AdminTemplate = ({ children }: IAdminTemplate) => {
+const AdminTemplate: FC<AdminTemplateProps> = ({ children }) => {
     return <div className={s.template}>{children}</div>;
 };
 

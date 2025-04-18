@@ -1,15 +1,15 @@
 @import "../../styles/usable/usable.scss";
 
 .button {
+    @include rounded-main;
+    @include font-main;
+    @include transition;
     width: 100%;
     height: 40px;
     background-color: $darkBlue;
     cursor: pointer;
     color: $white;
     font-size: inherit;
-    @include br8px;
-    @include mainFont;
-    @include transition;
     &:hover {
         opacity: 0.6;
     }

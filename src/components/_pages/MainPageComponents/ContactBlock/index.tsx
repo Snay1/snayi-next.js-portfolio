@@ -3,31 +3,29 @@ import s from "./ContactBlock.module.scss";
 import Image from "next/image";
 
 import contactImg from "@/images/contact-bg.png";
-import avatar from "@/images/smallAvatarImage.png";
 import tgIcon from "@/images/telegramIcon.svg";
 import discordIcon from "@/images/discordIcon.svg";
 
+const alternativeItems = [
+    {
+        title: "telegram",
+        icon: tgIcon,
+        link: "???",
+    },
+    {
+        title: "discord",
+        icon: discordIcon,
+        link: "???",
+    },
+];
 const ContactBlock = () => {
-    const alternativeItems = [
-        {
-            title: "telegram",
-            icon: tgIcon,
-            link: "???",
-        },
-        {
-            title: "discord",
-            icon: discordIcon,
-            link: "???",
-        },
-    ];
-
     const submitHandler = (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
     };
 
     return (
         <section className={`${s.contact} _section`}>
-            <div className={`${s.content} _container`}>
+            <div className={`${s.content} container`}>
                 <h2 className={`_title`}>contacts</h2>
                 <div className={s.wrapper}>
                     <div className={s.contactItems}>
@@ -47,17 +45,16 @@ const ContactBlock = () => {
                     </form> */}
                         <p className={s.alternativeText}>find me here</p>
                         <ul className={s.alternativeItems}>
-                            {alternativeItems &&
-                                alternativeItems.map((item) => (
-                                    <li key={item.title}>
-                                        <a href={item.link}>
-                                            <Image
-                                                src={item.icon}
-                                                alt={item.title}
-                                            />
-                                        </a>
-                                    </li>
-                                ))}
+                            {alternativeItems.map((item) => (
+                                <li key={item.title}>
+                                    <a href={item.link}>
+                                        <Image
+                                            src={item.icon}
+                                            alt={item.title}
+                                        />
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className={s.img}>

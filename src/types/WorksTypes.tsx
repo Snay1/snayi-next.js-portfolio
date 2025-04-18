@@ -22,7 +22,7 @@ export interface IWorkItemProps extends IWorkItem {
 }
 
 export interface IWorkItemsProps {
-    items: Array<IWorkItem>;
+    items: IWorkItem[];
     index: number;
     openedIndex: number;
     setOpenedIndex: (index: number) => void;

@@ -63,7 +63,7 @@ const WorksBlock = () => {
 
     return (
         <section className={`_section`}>
-            <h2 className={`_title _container`}>works</h2>
+            <h2 className={`_title container`}>works</h2>
             {items &&
                 items.map((item, index) => (
                     <WorkItems

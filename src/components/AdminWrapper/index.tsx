@@ -1,25 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 import axios from "@/axios";
 import s from "./AdminWrapper.module.scss";
 
 import { AdminLoginComponent } from "../_pages/AdminPageComponents";
 
-interface AdminWrapperInterface {
+interface AdminWrapperProps {
     children: React.ReactNode;
 }
 
-const AdminWrapper = ({ children }: AdminWrapperInterface) => {
+const AdminWrapper: FC<AdminWrapperProps> = ({ children }) => {
     const [isAuth, setIsAuth] = useState(false);
 
     const getMeHandler = () => {
         axios
             .get("/auth/getMe")
             .then((res) => {
-                if (res && res.data && res.data.success) {
-                    setIsAuth(true);
-                } else {
-                    setIsAuth(false);
-                }
+                setIsAuth(res && res.data && res.data.success);
             })
             .catch((e) => {
                 console.warn(e);

@@ -15,8 +15,8 @@ const SkillsItemsComponent = ({ skills }: ISkillItems) => {
                                     skill.knowledge === 2
                                         ? s.good
                                         : skill.knowledge === 1
-                                        ? s.bad
-                                        : ""
+                                          ? s.bad
+                                          : ""
                                 }`}
                             ></div>
                             <Image src={skill.icon} alt={skill.title} />

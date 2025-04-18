@@ -8,5 +8,5 @@ export interface ISkillItem {
 }
 
 export interface ISkillItems {
-    skills: Array<ISkillItem>;
+    skills: ISkillItem[];
 }

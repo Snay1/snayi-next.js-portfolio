@@ -8,10 +8,10 @@
     &:not(:last-child) {
         margin-bottom: 38px;
     }
-    @include desk1320px {
+    @include break-desk-big {
         grid-template-columns: 1fr 1fr;
     }
-    @include mobile {
+    @include break-mobile {
         grid-template-columns: 1fr;
     }
 }
@@ -22,13 +22,13 @@
     align-items: center;
     cursor: pointer;
     .img {
+        @include rounded-main;
         width: 100%;
-        min-height: 230px;
+        height: 300px;
         margin: 0 0 24px 0;
-        @include br8px;
         overflow: hidden;
         background-color: $darkGray;
-        @include desk1320px {
+        @include break-desk-big {
             min-height: 180px;
         }
         img {
@@ -52,7 +52,7 @@
         position: relative;
         display: flex;
         align-items: flex-start;
-        @include desk1024px {
+        @include break-desk {
             flex-direction: column;
         }
         .arrow {
@@ -88,7 +88,7 @@
             position: absolute;
             bottom: 50%;
             margin: 0 0 -25px 0;
-            @include br50;
+            @include rounded-full;
             border: 2px solid #444;
             width: 50px;
             height: 50px;
@@ -125,14 +125,14 @@
         margin: 0 50px 0 0;
         overflow: hidden;
         background-color: $darkBg;
-        @include br8px;
-        @include desk1024px {
+        @include rounded-main;
+        @include break-desk {
             width: 100%;
             margin: 0 0 25px 0;
             min-width: unset;
             max-width: unset;
         }
-        @include mobile {
+        @include break-mobile {
             height: 250px;
         }
         img {

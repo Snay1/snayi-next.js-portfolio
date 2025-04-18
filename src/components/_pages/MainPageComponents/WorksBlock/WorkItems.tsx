@@ -17,7 +17,7 @@ const WorkItems = ({
     const itemClickHandler = (
         item: IWorkItem,
         itemNumber: number,
-        el: HTMLLIElement | null
+        el: HTMLLIElement | null,
     ) => {
         setOpenedInfo({
             ...item,
@@ -38,7 +38,7 @@ const WorkItems = ({
 
     return (
         <>
-            <ul className={`${s.items} _container`}>
+            <ul className={`${s.items} container`}>
                 {items &&
                     items.map((item, index) => (
                         <WorkItem

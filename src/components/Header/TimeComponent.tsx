@@ -13,7 +13,7 @@ const TimeComponent = () => {
         const myTimeZone = 180 * 60000;
 
         const myTime = new Date(
-            Date.parse(date.toISOString()) - timezone * -60000 + myTimeZone
+            Date.parse(date.toISOString()) - timezone * -60000 + myTimeZone,
         );
 
         const timeNumberCheck = (number: number) =>
@@ -21,21 +21,19 @@ const TimeComponent = () => {
 
         setTime(
             `${timeNumberCheck(myTime.getHours())}:${timeNumberCheck(
-                myTime.getMinutes()
-            )}`
+                myTime.getMinutes(),
+            )}`,
         );
     };
 
     useEffect(() => {
-
         getTimeHandler();
 
         const interval = setInterval(getTimeHandler, 2000);
 
         return () => {
             clearInterval(interval);
-        }
-
+        };
     }, []);
 
     return (

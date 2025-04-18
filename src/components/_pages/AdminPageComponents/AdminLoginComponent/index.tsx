@@ -30,16 +30,14 @@ const AdminLoginComponent = () => {
 
             window.localStorage.setItem(
                 "snayi-portfolio-token",
-                res.data.result.token
+                res.data.result.token,
             );
             document.location.reload();
-
         } catch (error) {
             alert("Неверный логин или пароль");
         } finally {
             setLoading(false);
         }
-
     };
 
     return (

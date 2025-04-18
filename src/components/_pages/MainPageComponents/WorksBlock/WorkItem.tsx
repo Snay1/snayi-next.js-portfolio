@@ -15,7 +15,7 @@ const WorkItem = ({ title, images, onClick }: IWorkItemProps) => {
         >
             <div className={s.img}>
                 {images && images.length > 0 ? (
-                    <Image src={images[0]} alt={title} />
+                    <Image src={images[0]} width={400} height={200} alt={title} />
                 ) : (
                     <></>
                 )}

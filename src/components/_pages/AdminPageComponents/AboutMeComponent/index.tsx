@@ -22,12 +22,11 @@ const AboutMeComponent = () => {
             .then((res) => {
                 const { data } = res;
                 if (data.success) {
-                    
                 }
             })
             .catch((e) => console.warn(e));
-        
-        const res = await axios.get("/aboutMe").catch(e => console.warn(e));
+
+        const res = await axios.get("/aboutMe").catch((e) => console.warn(e));
 
         setLoading(false);
 
@@ -38,7 +37,6 @@ const AboutMeComponent = () => {
 
         setText(res.data.result.text);
         setError(false);
-        
     };
 
     const selectImageHandler = () => {
@@ -48,7 +46,7 @@ const AboutMeComponent = () => {
     const updateHandler = (
         e: SyntheticEvent | null,
         text: string | null,
-        image: string | null
+        image: string | null,
     ) => {
         if (e) {
             e.preventDefault();
@@ -58,7 +56,7 @@ const AboutMeComponent = () => {
 
         axios
             .post("/aboutMe", {
-                text: text
+                text: text,
                 // image: image || data.image,
             })
             .then((res) => {
@@ -117,9 +115,7 @@ const AboutMeComponent = () => {
                         className={s.textArea}
                         placeholder={"Text about me"}
                         value={text || ""}
-                        onChange={(e) =>
-                            setText(e.target.value)
-                        }
+                        onChange={(e) => setText(e.target.value)}
                     ></textarea>
                 </div>
                 <FormButton text="Update" />

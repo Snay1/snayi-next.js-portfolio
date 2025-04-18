@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import s from "./Header.module.scss";
 import TimeComponent from "./TimeComponent";
 
@@ -7,8 +7,7 @@ const navItems = [
     { title: "tg", link: "https://t.me/snayiii" },
 ];
 
-const Header: React.FC = () => {
-
+const Header: FC = () => {
     const [isActive, setIsActive] = useState(false);
     const [page, setPage] = useState("/");
 

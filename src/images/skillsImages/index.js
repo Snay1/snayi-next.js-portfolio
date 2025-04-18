@@ -8,3 +8,5 @@ export { default as reactIcon } from "./reactIcon.svg";
 export { default as reduxIcon } from "./reduxIcon.svg";
 export { default as sassIcon } from "./sassIcon.svg";
 export { default as tsIcon } from "./tsIcon.svg";
+export { default as zustandIcon } from "./zustand-icon.svg";
+export { default as reactQueryIcon } from "./react-query-icon.svg";

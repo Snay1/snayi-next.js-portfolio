@@ -1,10 +1,11 @@
+import { FC } from "react";
 import { AboutMeComponent } from "../";
 
-interface IAdminPageSwitcher {
+interface AdminPageSwitcherProps {
     page: string | string[] | undefined;
 }
 
-const AdminPageSwitcher = ({ page }: IAdminPageSwitcher) => {
+const AdminPageSwitcher: FC<AdminPageSwitcherProps> = ({ page }) => {
     switch (page) {
         case "about-me":
             return <AboutMeComponent />;

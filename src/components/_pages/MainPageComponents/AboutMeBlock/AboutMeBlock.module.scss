@@ -18,7 +18,7 @@
 .img {
     width: 542px;
     height: 717px;
-    @include desk1024px {
+    @include break-desk {
         display: none;
     }
     img {
@@ -28,7 +28,7 @@
         width: 542px;
         height: 717px;
         object-fit: scale-down;
-        @include desk1320px {
+        @include break-desk-big {
             left: -30px;
         }
     }
@@ -37,10 +37,10 @@
 .text {
     width: 680px;
     line-height: 130%;
-    @include desk1320px {
+    @include break-desk-big {
         width: 400px;
     }
-    @include desk1024px {
+    @include break-desk {
         width: 100%;
     }
 }

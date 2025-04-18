@@ -1,12 +1,12 @@
-@mixin br50 {
-    border-radius: 50%;
+@mixin rounded-full {
+    border-radius: 100vh;
 }
 
-@mixin br8px {
+@mixin rounded-main {
     border-radius: 8px;
 }
 
-@mixin textShadow {
+@mixin text-shadow {
     filter: drop-shadow(6px 4px 31px rgba(255, 255, 255, 0.44));
 }
 
@@ -14,24 +14,24 @@
     transition: all ease 0.6s;
 }
 
-@mixin desk1320px {
+@mixin break-desk-big {
     @media (max-width: 1320px) {
         @content;
     }
 }
 
-@mixin desk1024px {
+@mixin break-desk {
     @media (max-width: 1023px) {
         @content;
     }
 }
 
-@mixin mobile {
+@mixin break-mobile {
     @media (max-width: 767px) {
         @content;
     }
 }
 
-@mixin mainFont {
+@mixin font-main {
     font-family: "Russo One", sans-serif;
 }

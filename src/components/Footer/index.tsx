@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import IconSelector, { IconType } from "../IconSelector";
 import s from "./Footer.module.scss";
 
@@ -6,7 +6,7 @@ type SocialsItem = {
     title: string;
     icon: IconType;
     link: string;
-}
+};
 
 const socials: SocialsItem[] = [
     {
@@ -21,27 +21,25 @@ const socials: SocialsItem[] = [
     },
 ];
 
-const Footer: React.FC = () => {
+const currentYear = new Date().getFullYear();
 
-    const [currentYear] = useState(new Date().getFullYear());
-
+const Footer: FC = () => {
     return (
         <footer className={s.footer}>
-            <div className={`${s.content} _container`}>
+            <div className={`${s.content} container`}>
                 <p>snayi portfolio © {currentYear}</p>
                 <ul className={s.socials}>
-                    {socials &&
-                        socials.map((social) => (
-                            <li key={social.title}>
-                                <a
-                                    href={social.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <IconSelector icon={social.icon} />
-                                </a>
-                            </li>
-                        ))}
+                    {socials.map((social) => (
+                        <li key={social.title}>
+                            <a
+                                href={social.link}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <IconSelector icon={social.icon} />
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </footer>

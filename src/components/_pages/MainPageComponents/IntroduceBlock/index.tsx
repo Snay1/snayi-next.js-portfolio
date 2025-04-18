@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import s from "./IntroduceBlock.module.scss";
 
-import bg from "@/images/backgroud-image.png";
-import avatar from "@/images/avatar.jpg";
-import bottom from "@/images/intro-bottom.png";
-
 const IntroduceBlock = () => {
     const [position, setPosition] = useState(0);
 
@@ -24,7 +20,12 @@ const IntroduceBlock = () => {
                 Snayi
             </h1>
             <div className={s.avatar} style={{ top: `${position / 5}px` }}>
-                <Image src={avatar} alt={"Avatar Image"} />
+                <Image
+                    src={"/images/avatar.jpg"}
+                    width={350}
+                    height={350}
+                    alt={"Avatar Image"}
+                />
                 {/* <div className={s.status}>
                 </div>
                 <div className={s.statusText}>playing osu!</div> */}
@@ -33,10 +34,20 @@ const IntroduceBlock = () => {
                 Front-end Developer
             </p>
             <div className={s.bottom}>
-                <Image src={bottom} alt={"Introduce background"} />
+                <Image
+                    src={"/images/intro-bottom.png"}
+                    width={1440}
+                    height={75}
+                    alt={"Introduce background"}
+                />
             </div>
             <div className={s.bg}>
-                <Image src={bg} alt={"Introduce background"} />
+                <Image
+                    src={"/images/background-image.png"}
+                    width={1440}
+                    height={900}
+                    alt={"Introduce background"}
+                />
             </div>
         </section>
     );

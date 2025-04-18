@@ -1,16 +1,16 @@
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import s from "../WorksBlock.module.scss";
 import Image from "next/image";
 
 import { IOpenedInfo } from "@/types/WorksTypes";
 import Slider from "./Slider";
 
-interface IOpenedItem {
+interface OpenedItemProps {
     info: IOpenedInfo;
     itemNumber: number;
 }
 
-const OpenedItem = ({ info, itemNumber }: IOpenedItem) => {
+const OpenedItem: FC<OpenedItemProps> = ({ info, itemNumber }) => {
     const contentRef = useRef<HTMLDivElement | null>(null);
     const arrowRef = useRef<HTMLDivElement | null>(null);
 
@@ -40,14 +40,14 @@ const OpenedItem = ({ info, itemNumber }: IOpenedItem) => {
     return (
         <div className={s.openedItemWrapper}>
             <div className={s.openedItem}>
-                <div className={`${s.content} _container`} ref={contentRef}>
+                <div className={`${s.content} container`} ref={contentRef}>
                     <div className={s.arrow} ref={arrowRef}></div>
                     {info.images ? (
                         info.images.length > 1 ? (
                             <Slider images={info.images} title={info.title} />
                         ) : (
                             <div className={s.img}>
-                                <Image src={info.images[0]} alt={info.title} />
+                                <Image src={info.images[0]} width={400} height={350} alt={info.title} />
                             </div>
                         )
                     ) : (
@@ -63,6 +63,8 @@ const OpenedItem = ({ info, itemNumber }: IOpenedItem) => {
                                         <li key={index}>
                                             <Image
                                                 src={item.image}
+                                                width={400}
+                                                height={350}
                                                 alt={item.title}
                                             />
                                         </li>

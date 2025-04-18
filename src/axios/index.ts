@@ -6,8 +6,11 @@ const instanse = axios.create({
 });
 
 instanse.interceptors.request.use((config) => {
-    config.headers.Authorization = typeof window !== undefined ? `Bearer ${typeof window !== "undefined" ? `Bearer ${window.localStorage.getItem("snayi-portfolio-token")}` : ""}` : "";
+    config.headers.Authorization =
+        typeof window !== undefined
+            ? `Bearer ${typeof window !== "undefined" ? `Bearer ${window.localStorage.getItem("snayi-portfolio-token")}` : ""}`
+            : "";
     return config;
-  });
+});
 
 export default instanse;

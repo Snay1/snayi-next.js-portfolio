@@ -1,12 +1,13 @@
 import s from "./PageTemplate.module.scss";
 
 import { Footer, Header } from "../";
+import { FC } from "react";
 
-interface PageTemplateInterface {
+interface PageTemplateProps {
     children: React.ReactNode;
 }
 
-const PageTemplate = ({ children }: PageTemplateInterface) => {
+const PageTemplate: FC<PageTemplateProps> = ({ children }) => {
     return (
         <div className={s.wrapper}>
             <Header />

@@ -24,8 +24,8 @@ export const skillsInitial: ISkillItem[] = [
     { title: "redux (rtk)", icon: reduxIcon, knowledge: 4, isMain: true },
     { title: "typescript", icon: tsIcon, knowledge: 4, isMain: true },
     { title: "next.js", icon: nextIcon, knowledge: 4, isMain: true },
-    { title: "mongoDB", icon: mongoIcon, knowledge: 2, isMain: false },
-    { title: "node.js", icon: nodeIcon, knowledge: 2, isMain: false },
+    { title: "mongoDB", icon: mongoIcon, knowledge: 4, isMain: true },
+    { title: "node.js", icon: nodeIcon, knowledge: 4, isMain: true },
     { title: "docker", icon: dockerIcon, knowledge: 2, isMain: false },
-    { title: "express", icon: expressIcon, knowledge: 2, isMain: false },
+    { title: "express", icon: expressIcon, knowledge: 4, isMain: true },
 ];
